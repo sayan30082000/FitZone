@@ -66,4 +66,21 @@ export const PLANS = [
   },
 ];
 
-export const GOALS = ["Lose weight", "Build strength", "Get fitter overall", "Recover from an injury", "Just try it out"];
+// Footer contact details and social profiles. A social link with an empty
+// `url` is left out of the footer.
+export const CONTACT = {
+  phone: "+8801799-414228",
+  phoneHref: "tel:+8801799414228",
+  location: "Chittagong, Bangladesh",
+  email: "bobbymelody30@gmail.com",
+};
+
+export const SOCIALS = [
+  { id: "facebook", label: "Facebook", url: "" },
+  { id: "instagram", label: "Instagram", url: "" },
+  { id: "linkedin", label: "LinkedIn", url: "" },
+  { id: "youtube", label: "YouTube", url: "" },
+  { id: "whatsapp", label: "WhatsApp", url: "https://wa.me/8801799414228" },
+];
+
+export const GOALS =["Lose weight", "Build strength", "Get fitter overall", "Recover from an injury", "Just try it out"];
