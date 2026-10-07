@@ -3,8 +3,6 @@ import { CONTACT, NAV_LINKS, SOCIALS } from "@/data/content";
 import SocialIcon from "./SocialIcon";
 
 export default function Footer() {
-  const socials = SOCIALS.filter((s) => s.url);
-
   return (
     <footer className="bg-[#090b10] px-6 min-[900px]:px-12">
       <div className="mx-auto grid max-w-[1100px] gap-12 border-t border-white/10 py-14 min-[700px]:grid-cols-2 min-[1000px]:grid-cols-3">
@@ -42,10 +40,10 @@ export default function Footer() {
         {/* Social + contact */}
         <div>
           <h2 className="mb-6 font-display text-base font-extrabold tracking-wide text-flame uppercase">Follow Us</h2>
-          {socials.length > 0 && (
-            <ul className="mb-7 flex flex-wrap gap-4">
-              {socials.map((s) => (
-                <li key={s.id}>
+          <ul className="mb-7 flex flex-wrap gap-4">
+            {SOCIALS.map((s) => (
+              <li key={s.id}>
+                {s.url ? (
                   <a
                     href={s.url}
                     target="_blank"
@@ -55,10 +53,16 @@ export default function Footer() {
                   >
                     <SocialIcon id={s.id} className="size-[26px]" />
                   </a>
-                </li>
-              ))}
-            </ul>
-          )}
+                ) : (
+                  // No profile link yet: show the icon without a dead link.
+                  <span title={`${s.label} coming soon`} className="block">
+                    <SocialIcon id={s.id} className="size-[26px]" />
+                    <span className="sr-only">{s.label} (coming soon)</span>
+                  </span>
+                )}
+              </li>
+            ))}
+          </ul>
           <ul className="space-y-4 text-sm font-semibold">
             <li>
               <a href={CONTACT.phoneHref} className="flex items-center gap-2.5 hover:text-flame-light">

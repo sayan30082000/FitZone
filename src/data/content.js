@@ -66,8 +66,8 @@ export const PLANS = [
   },
 ];
 
-// Footer contact details and social profiles. A social link with an empty
-// `url` is left out of the footer.
+// Footer contact details and social profiles. A social profile with an empty
+// `url` shows its icon without a link until the URL is filled in.
 export const CONTACT = {
   phone: "+8801799-414228",
   phoneHref: "tel:+8801799414228",
