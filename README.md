@@ -26,8 +26,8 @@ The FitZone Studio funnel page, rebuilt with **Next.js, React, JavaScript and Ta
 ## Run it locally
 
 ```bash
-git clone https://github.com/sayan30082000/FitZone-Studio.git
-cd FitZone-Studio
+git clone https://github.com/sayan30082000/FitZone.git
+cd FitZone
 npm install
 npm run dev        # http://localhost:3000
 npm run build      # static site in out/
