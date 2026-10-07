@@ -1,24 +1,17 @@
-import { Barlow, Barlow_Condensed, Inter } from "next/font/google";
+// Fonts are self-hosted from npm (@fontsource) instead of next/font/google:
+// next/font's Google fetch fails in Netlify's build, and this way the build
+// needs no network access at all. Latin subset only, just the weights we use.
+import "@fontsource/barlow/latin-400.css";
+import "@fontsource/barlow/latin-600.css";
+import "@fontsource/barlow/latin-700.css";
+import "@fontsource/barlow/latin-800.css";
+import "@fontsource/barlow/latin-900.css";
+import "@fontsource/barlow/latin-900-italic.css";
+import "@fontsource/barlow-condensed/latin-700.css";
+import "@fontsource/barlow-condensed/latin-800.css";
+import "@fontsource/barlow-condensed/latin-900.css";
+import "@fontsource-variable/inter";
 import "./globals.css";
-
-const barlow = Barlow({
-  variable: "--font-barlow",
-  subsets: ["latin"],
-  weight: ["400", "600", "700", "800", "900"],
-  style: ["normal", "italic"],
-});
-
-const barlowCondensed = Barlow_Condensed({
-  variable: "--font-barlow-condensed",
-  subsets: ["latin"],
-  weight: ["700", "800", "900"],
-});
-
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-});
 
 export const metadata = {
   title: "FitZone Studio — Transform Your Body, Transform Your Life",
@@ -37,7 +30,7 @@ export const viewport = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${barlow.variable} ${barlowCondensed.variable} ${inter.variable}`}>
+    <html lang="en">
       <body>{children}</body>
     </html>
   );

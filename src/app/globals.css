@@ -12,9 +12,9 @@
   /* Lighter than the original #6b7280 so small grey text passes AA on the dark background. */
   --color-muted: #9097a3;
 
-  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
-  --font-display: var(--font-barlow), ui-sans-serif, system-ui, sans-serif;
-  --font-condensed: var(--font-barlow-condensed), var(--font-barlow), sans-serif;
+  --font-sans: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Barlow", ui-sans-serif, system-ui, sans-serif;
+  --font-condensed: "Barlow Condensed", "Barlow", sans-serif;
 
   --animate-fade-up: fade-up 0.5s ease both;
 

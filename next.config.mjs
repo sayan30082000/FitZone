@@ -6,8 +6,7 @@ const nextConfig = {
   images: { unoptimized: true },
   turbopack: {
     rules: {
-      // Only our own CSS. Without the condition the loader also rewrites the
-      // CSS that next/font generates, which breaks the font URLs on Netlify.
+      // Only our own CSS; the font stylesheets in node_modules don't need Tailwind.
       "*.css": {
         condition: { not: "foreign" },
         loaders: ["@tailwindcss/turbopack"],
